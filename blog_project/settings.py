@@ -45,11 +45,14 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'rest_auth',
-    'rest_auth.registeration',
+    'rest_auth.registration',
     
     #Local
     'posts.apps.PostsConfig',
 ]
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
